@@ -1,0 +1,9 @@
+/* Estilos personalizados adicionales a Tailwind */
+body {
+    transition: background-color 0.3s;
+}
+
+.estado-activo {
+    border: 2px solid #3b82f6; /* blue-500 */
+    background-color: #dbeafe; /* blue-100 */
+}
