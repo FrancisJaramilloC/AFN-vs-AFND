@@ -49,6 +49,23 @@ document.addEventListener('DOMContentLoaded', () => {
             mostrarResultadoEj2(resultado);
         });
     }
+    const formEj3 = document.getElementById('form-ej3');
+    if (formEj3) {
+        formEj3.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const cadena = document.getElementById('cadena-ej3').value.trim();
+            const btn = formEj3.querySelector('button');
+            btn.disabled = true;
+            btn.textContent = 'Evaluando...';
+            
+            const resultado = await evaluarCadena(3, cadena);
+            
+            btn.disabled = false;
+            btn.textContent = 'Evaluar Cadena';
+            
+            mostrarResultadoEj3(resultado);
+        });
+    }
 });
 
 function renderizarRecorrido(datos) {
@@ -104,4 +121,27 @@ function mostrarResultadoEj2(resultado) {
     
     // Cambiar color de fondo según aceptación
     divAfd.className = `p-4 rounded mt-3 border shadow-sm ${resultado.afd.aceptada ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`;
+}
+
+function mostrarResultadoEj3(resultado) {
+    const contenedor = document.getElementById('resultado-ej3');
+    const divTraduccion = document.getElementById('traduccion-ej3');
+    const divAfd = document.getElementById('resultado-afd-ej3');
+    
+    contenedor.classList.remove('hidden');
+    
+    if (resultado.error) {
+        divTraduccion.innerHTML = '';
+        divAfd.innerHTML = `<p class="text-red-500">${resultado.error}</p>`;
+        return;
+    }
+
+    // Mostrar la traducción de la cadena original al alfabeto del autómata
+    const datos = resultado.afd;
+    divTraduccion.innerHTML = `<strong>Entrada:</strong> "${datos.cadena_original}" → <strong>Traducción:</strong> "${datos.cadena_procesada}"`;
+
+    divAfd.innerHTML = renderizarRecorrido(datos);
+    
+    // Cambiar color de fondo según aceptación
+    divAfd.className = `p-4 rounded mt-3 border shadow-sm ${datos.aceptada ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`;
 }
