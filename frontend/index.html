@@ -12,11 +12,18 @@
     <nav class="bg-blue-600 text-white p-4 shadow-md">
         <div class="container mx-auto flex justify-between items-center">
             <h1 class="text-2xl font-bold cursor-pointer" onclick="mostrarSeccion('inicio')">Autómatas: AFD vs AFND</h1>
-            <ul class="flex space-x-4">
+            <ul class="flex space-x-4 items-center">
                 <li><a href="#" onclick="mostrarSeccion('inicio')" class="hover:text-blue-200">Inicio</a></li>
-                <li><a href="#" onclick="mostrarSeccion('ejercicio-1')" class="hover:text-blue-200">Ejercicio 1</a></li>
-                <li><a href="#" onclick="mostrarSeccion('ejercicio-2')" class="hover:text-blue-200">Ejercicio 2</a></li>
-                <li><a href="#" onclick="mostrarSeccion('ejercicio-3')" class="hover:text-blue-200">Ejercicio 3</a></li>
+                <li class="border-l border-blue-400 h-6 mx-2"></li>
+                <li class="text-xs font-bold uppercase tracking-widest text-blue-200">AFDs:</li>
+                <li><a href="#" onclick="mostrarSeccion('ejercicio-1')" class="hover:text-blue-200">Ej 1</a></li>
+                <li><a href="#" onclick="mostrarSeccion('ejercicio-2')" class="hover:text-blue-200">Ej 2</a></li>
+                <li><a href="#" onclick="mostrarSeccion('ejercicio-3')" class="hover:text-blue-200">Ej 3</a></li>
+                <li class="border-l border-blue-400 h-6 mx-2"></li>
+                <li class="text-xs font-bold uppercase tracking-widest text-blue-200">Ejercicios AFND:</li>
+                <li><a href="#" onclick="mostrarSeccion('ejercicio-4')" class="hover:text-blue-200">Ej 4</a></li>
+                <li><a href="#" onclick="mostrarSeccion('ejercicio-5')" class="hover:text-blue-200">Ej 5</a></li>
+                <li><a href="#" onclick="mostrarSeccion('ejercicio-6')" class="hover:text-blue-200">Ej 6</a></li>
             </ul>
         </div>
     </nav>
@@ -28,18 +35,39 @@
             <div id="inicio" class="bg-white p-8 rounded-lg shadow-md text-center seccion-vista">
                 <h2 class="text-3xl font-bold mb-6 text-blue-700">Bienvenido al Simulador de Autómatas</h2>
                 <p class="text-gray-700 mb-8 text-lg">Selecciona uno de los ejercicios a continuación para ver el problema, su diagrama y ejecutar pruebas de cadenas.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div onclick="mostrarSeccion('ejercicio-1')" class="border rounded-lg p-6 hover:bg-blue-50 cursor-pointer transition shadow-sm">
-                        <h3 class="text-xl font-semibold mb-2">Ejercicio 1</h3>
-                        <p class="text-gray-600">Validador de Flujo de Transacciones Bancarias (AFD)</p>
+                <div class="mb-10">
+                    <h3 class="text-xl font-bold mb-4 text-blue-600 border-b pb-2 inline-block">Bloque 1: Autómatas Finitos Deterministas (AFD)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div onclick="mostrarSeccion('ejercicio-1')" class="border rounded-lg p-6 hover:bg-blue-50 cursor-pointer transition shadow-sm bg-white">
+                            <h3 class="text-xl font-semibold mb-2">Ejercicio 1</h3>
+                            <p class="text-gray-600">Validador de Flujo de Transacciones Bancarias</p>
+                        </div>
+                        <div onclick="mostrarSeccion('ejercicio-2')" class="border rounded-lg p-6 hover:bg-blue-50 cursor-pointer transition shadow-sm bg-white">
+                            <h3 class="text-xl font-semibold mb-2">Ejercicio 2</h3>
+                            <p class="text-gray-600">Sistema de Seguridad IoT (Cerradura)</p>
+                        </div>
+                        <div onclick="mostrarSeccion('ejercicio-3')" class="border rounded-lg p-6 hover:bg-blue-50 cursor-pointer transition shadow-sm bg-white">
+                            <h3 class="text-xl font-semibold mb-2">Ejercicio 3</h3>
+                            <p class="text-gray-600">Analizador de Notación Científica</p>
+                        </div>
                     </div>
-                    <div onclick="mostrarSeccion('ejercicio-2')" class="border rounded-lg p-6 hover:bg-blue-50 cursor-pointer transition shadow-sm">
-                        <h3 class="text-xl font-semibold mb-2">Ejercicio 2</h3>
-                        <p class="text-gray-600">Sistema de Seguridad IoT (Cerradura Inteligente - AFD)</p>
-                    </div>
-                    <div onclick="mostrarSeccion('ejercicio-3')" class="border rounded-lg p-6 hover:bg-blue-50 cursor-pointer transition shadow-sm">
-                        <h3 class="text-xl font-semibold mb-2">Ejercicio 3</h3>
-                        <p class="text-gray-600">Analizador Léxico para Notación Científica (AFD)</p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-blue-600 border-b pb-2 inline-block">Bloque 2: Autómatas Finitos No Deterministas (AFND)</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div onclick="mostrarSeccion('ejercicio-4')" class="border rounded-lg p-6 hover:bg-blue-50 cursor-pointer transition shadow-sm bg-white">
+                            <h3 class="text-xl font-semibold mb-2">Ejercicio 4</h3>
+                            <p class="text-gray-600">IDS - Detección de Ataques en Red</p>
+                        </div>
+                        <div onclick="mostrarSeccion('ejercicio-5')" class="border rounded-lg p-6 hover:bg-blue-50 cursor-pointer transition shadow-sm bg-white">
+                            <h3 class="text-xl font-semibold mb-2">Ejercicio 5</h3>
+                            <p class="text-gray-600">Protocolo de Telemetría IoT</p>
+                        </div>
+                        <div onclick="mostrarSeccion('ejercicio-6')" class="border rounded-lg p-6 hover:bg-blue-50 cursor-pointer transition shadow-sm bg-white">
+                            <h3 class="text-xl font-semibold mb-2">Ejercicio 6</h3>
+                            <p class="text-gray-600">Secuencias BioInformáticas</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -244,8 +272,199 @@
                     </div>
                 </div>
             </div>
-            
-        </div>
+            <div id="ejercicio-4" class="bg-white p-6 rounded-lg shadow-md mb-8 seccion-vista hidden">
+                <h2 class="text-2xl font-bold mb-4 text-blue-700">Ejercicio 4: IDS - Detección de Ataques (AFND)</h2>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Descripción del Problema Real</h3>
+                    <p class="text-gray-700">Se busca detectar un patrón específico de ataque: <strong>Un intento de conexión (s), seguido de uno o más respuestas (a), y un reset abrupto (r)</strong>.</p>
+                </div>
+
+                <div class="mb-6">
+                    <div class="border p-6 rounded bg-gray-50">
+                        <h3 class="text-xl font-semibold text-center mb-4">Autómata Finito No Determinista (AFND)</h3>
+                        <p class="text-gray-600 mb-2"><strong>Alfabeto (Σ):</strong> {s, a, r}</p>
+                        <p class="text-gray-600 mb-2"><strong>Estados (Q):</strong> {q0, q1, q2, q3}</p>
+                        <p class="text-gray-600 mb-4"><strong>Estado Inicial:</strong> q0 | <strong>Estados de Aceptación (F):</strong> {q3}</p>
+                        
+                        <details class="mb-6 bg-white border rounded p-4 shadow-sm">
+                            <summary class="font-semibold cursor-pointer text-blue-700">Ver Tabla de Transiciones δ(Q, Σ)</summary>
+                            <div class="mt-4 overflow-x-auto">
+                                <table class="min-w-full text-center border-collapse">
+                                    <thead>
+                                        <tr class="bg-gray-100">
+                                            <th class="border p-2">Estado</th>
+                                            <th class="border p-2">s (SYN)</th>
+                                            <th class="border p-2">a (ACK)</th>
+                                            <th class="border p-2">r (RST)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="border p-2 font-bold">-> q0</td><td class="border p-2">q1</td><td class="border p-2">∅</td><td class="border p-2">∅</td></tr>
+                                        <tr><td class="border p-2 font-bold">q1</td><td class="border p-2">∅</td><td class="border p-2">q1, q2</td><td class="border p-2">∅</td></tr>
+                                        <tr><td class="border p-2 font-bold">q2</td><td class="border p-2">∅</td><td class="border p-2">∅</td><td class="border p-2">q3</td></tr>
+                                        <tr><td class="border p-2 font-bold text-green-600">* q3</td><td class="border p-2">∅</td><td class="border p-2">∅</td><td class="border p-2">∅</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
+
+                        <div class="flex justify-center">
+                            <div class="text-center p-8 border-2 border-dashed rounded w-full bg-white text-gray-400">
+                                <p>Diagrama AFND JFLAP</p>
+                                <p class="text-xs">(Carga la imagen como assets/ejercicio4_afnd.jpeg)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded border border-blue-200">
+                    <h3 class="text-xl font-semibold mb-3">Simulador</h3>
+                    <p class="text-gray-600 mb-4">Ingresa la secuencia de logs. Ejemplo válido: <code>sar</code>, <code>saar</code>.</p>
+                    <form id="form-ej4" class="flex flex-col sm:flex-row gap-4 items-center">
+                        <input type="text" id="cadena-ej4" class="border border-gray-300 p-3 rounded flex-1 w-full" placeholder="Ej: saar" required>
+                        <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded hover:bg-blue-700 transition font-semibold w-full sm:w-auto shadow">Evaluar Cadena</button>
+                    </form>
+                    
+                    <!-- Resultados -->
+                    <div id="resultado-ej4" class="mt-6 hidden">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-lg border-b pb-2">Ejecución del Autómata (AFND)</h4>
+                            <div id="resultado-afnd-ej4" class="p-4 rounded mt-3 border bg-white shadow-sm"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejercicio 5 (AFND) -->
+            <div id="ejercicio-5" class="bg-white p-6 rounded-lg shadow-md mb-8 seccion-vista hidden">
+                <h2 class="text-2xl font-bold mb-4 text-blue-700">Ejercicio 5: Validación de Protocolo de Telemetría IoT (AFND)</h2>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Descripción del Problema Real</h3>
+                    <p class="text-gray-700">Un dispositivo IoT envía paquetes de datos. El paquete debe empezar con un encabezado <strong>HDR</strong>, seguido de cualquier cantidad de lecturas (<strong>TEMP</strong> o <strong>HUM</strong>), y finalizar exclusivamente con un código <strong>CRC</strong>.</p>
+                </div>
+
+                <div class="mb-6">
+                    <div class="border p-6 rounded bg-gray-50">
+                        <h3 class="text-xl font-semibold text-center mb-4">Autómata Finito No Determinista (AFND)</h3>
+                        <p class="text-gray-600 mb-2"><strong>Alfabeto (Σ):</strong> {h (HDR), t (TEMP), m (HUM), c (CRC)}</p>
+                        <p class="text-gray-600 mb-2"><strong>Estados (Q):</strong> {q0, q1, q2}</p>
+                        <p class="text-gray-600 mb-4"><strong>Estado Inicial:</strong> q0 | <strong>Estados de Aceptación (F):</strong> {q2}</p>
+                        
+                        <details class="mb-6 bg-white border rounded p-4 shadow-sm">
+                            <summary class="font-semibold cursor-pointer text-blue-700">Ver Tabla de Transiciones δ(Q, Σ)</summary>
+                            <div class="mt-4 overflow-x-auto">
+                                <table class="min-w-full text-center border-collapse">
+                                    <thead>
+                                        <tr class="bg-gray-100">
+                                            <th class="border p-2">Estado</th>
+                                            <th class="border p-2">h (HDR)</th>
+                                            <th class="border p-2">t (TEMP)</th>
+                                            <th class="border p-2">m (HUM)</th>
+                                            <th class="border p-2">c (CRC)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="border p-2 font-bold">-> q0</td><td class="border p-2">{q1}</td><td class="border p-2">∅</td><td class="border p-2">∅</td><td class="border p-2">∅</td></tr>
+                                        <tr><td class="border p-2 font-bold">q1</td><td class="border p-2">∅</td><td class="border p-2">{q1}</td><td class="border p-2">{q1}</td><td class="border p-2">{q2}</td></tr>
+                                        <tr><td class="border p-2 font-bold text-green-600">* q2</td><td class="border p-2">∅</td><td class="border p-2">∅</td><td class="border p-2">∅</td><td class="border p-2">∅</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
+
+                        <div class="flex justify-center">
+                            <div class="text-center p-8 border-2 border-dashed rounded w-full bg-white text-gray-400">
+                                <p>Diagrama AFND JFLAP (IoT)</p>
+                                <p class="text-xs">(Carga la imagen como assets/ejercicio5_afnd.jpeg)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded border border-blue-200">
+                    <h3 class="text-xl font-semibold mb-3">Simulador</h3>
+                    <p class="text-gray-600 mb-4">Ingresa la secuencia del protocolo. Ejemplo válido: <code>hc</code>, <code>httmc</code>, <code>htmc</code>.</p>
+                    <form id="form-ej5" class="flex flex-col sm:flex-row gap-4 items-center">
+                        <input type="text" id="cadena-ej5" class="border border-gray-300 p-3 rounded flex-1 w-full" placeholder="Ej: httmc" required>
+                        <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded hover:bg-blue-700 transition font-semibold w-full sm:w-auto shadow">Evaluar Cadena</button>
+                    </form>
+                    
+                    <!-- Resultados -->
+                    <div id="resultado-ej5" class="mt-6 hidden">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-lg border-b pb-2">Ejecución del Autómata (AFND)</h4>
+                            <div id="resultado-afnd-ej5" class="p-4 rounded mt-3 border bg-white shadow-sm"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ejercicio 6 (AFND) -->
+            <div id="ejercicio-6" class="bg-white p-6 rounded-lg shadow-md mb-8 seccion-vista hidden">
+                <h2 class="text-2xl font-bold mb-4 text-blue-700">Ejercicio 6: Reconocimiento de Secuencias Genéticas (AFND)</h2>
+                
+                <div class="mb-6">
+                    <h3 class="text-xl font-semibold mb-2">Descripción del Problema Real</h3>
+                    <p class="text-gray-700">Buscamos identificar un patrón funcional en una cadena de aminoácidos: Una <strong>Lysina (k)</strong>, seguida de una <strong>Glicina (g)</strong>, seguida de <strong>cualquier aminoácido (x)</strong> repetido 0 o más veces, y terminando en <strong>Fenilalanina (f)</strong>.</p>
+                </div>
+
+                <div class="mb-6">
+                    <div class="border p-6 rounded bg-gray-50">
+                        <h3 class="text-xl font-semibold text-center mb-4">Autómata Finito No Determinista (AFND)</h3>
+                        <p class="text-gray-600 mb-2"><strong>Alfabeto (Σ):</strong> {k, g, f, x (cualquiera)}</p>
+                        <p class="text-gray-600 mb-2"><strong>Estados (Q):</strong> {q0, q1, q2, q3}</p>
+                        <p class="text-gray-600 mb-4"><strong>Estado Inicial:</strong> q0 | <strong>Estados de Aceptación (F):</strong> {q3}</p>
+                        
+                        <details class="mb-6 bg-white border rounded p-4 shadow-sm">
+                            <summary class="font-semibold cursor-pointer text-blue-700">Ver Tabla de Transiciones δ(Q, Σ)</summary>
+                            <div class="mt-4 overflow-x-auto">
+                                <table class="min-w-full text-center border-collapse">
+                                    <thead>
+                                        <tr class="bg-gray-100">
+                                            <th class="border p-2">Estado</th>
+                                            <th class="border p-2">k (Lys)</th>
+                                            <th class="border p-2">g (Gly)</th>
+                                            <th class="border p-2">f (Phe)</th>
+                                            <th class="border p-2">x (Cualquiera)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td class="border p-2 font-bold">-> q0</td><td class="border p-2">{q1}</td><td class="border p-2">∅</td><td class="border p-2">∅</td><td class="border p-2">∅</td></tr>
+                                        <tr><td class="border p-2 font-bold">q1</td><td class="border p-2">∅</td><td class="border p-2">{q2}</td><td class="border p-2">∅</td><td class="border p-2">∅</td></tr>
+                                        <tr><td class="border p-2 font-bold">q2</td><td class="border p-2">{q2}</td><td class="border p-2">{q2}</td><td class="border p-2 text-orange-600 font-bold">{q2, q3}</td><td class="border p-2">{q2}</td></tr>
+                                        <tr><td class="border p-2 font-bold text-green-600">* q3</td><td class="border p-2">∅</td><td class="border p-2">∅</td><td class="border p-2">∅</td><td class="border p-2">∅</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </details>
+
+                        <div class="flex justify-center">
+                            <div class="text-center p-8 border-2 border-dashed rounded w-full bg-white text-gray-400">
+                                <p>Diagrama AFND JFLAP (Genética)</p>
+                                <p class="text-xs">(Carga la imagen como assets/ejercicio6_afnd.jpeg)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded border border-blue-200">
+                    <h3 class="text-xl font-semibold mb-3">Simulador</h3>
+                    <p class="text-gray-600 mb-4">Ingresa la secuencia de aminoácidos. Ejemplo válido: <code>kgf</code>, <code>kgxf</code>, <code>kggfff</code>.</p>
+                    <form id="form-ej6" class="flex flex-col sm:flex-row gap-4 items-center">
+                        <input type="text" id="cadena-ej6" class="border border-gray-300 p-3 rounded flex-1 w-full" placeholder="Ej: kgxf" required>
+                        <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded hover:bg-blue-700 transition font-semibold w-full sm:w-auto shadow">Evaluar Cadena</button>
+                    </form>
+                    
+                    <!-- Resultados -->
+                    <div id="resultado-ej6" class="mt-6 hidden">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 text-lg border-b pb-2">Ejecución del Autómata (AFND)</h4>
+                            <div id="resultado-afnd-ej6" class="p-4 rounded mt-3 border bg-white shadow-sm"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </main>
 
     <script src="js/api.js"></script>
